@@ -5,6 +5,10 @@
     --main-color: rgb(48, 48, 48);
 }
 
+html{
+    font-size: 6.25%;
+}
+
 body{
     background-color: rgb(0, 120, 201);
 }
@@ -46,16 +50,26 @@ div.add-data{
 img.profile-pic{
     width: 50%;
     border-radius: 50%;
+    box-shadow: 0px 0px 5px var(--main-color);
+    
 }
 h1.st-name{
     font-family: var(--main-font);
-    font-size: 40px;
+    font-size: 40rem;
     color: var(--main-color);
     font-weight: 900;
+    text-shadow: 0px 2px 5px rgba(1, 1, 1, 0.5);
+    margin-top: 10px;
 }
 h1.role{
     font-family: var(--main-font);
     color: var(--main-color);
-    font-size: 25px;
+    font-size: 25rem;
     margin-top: -25px;
+}
+h1.time{
+    font-family: var(--main-font);
+    margin-top: -10px;
+    color: rgb(21, 180, 0);
+    font-size: 25rem;
 }
