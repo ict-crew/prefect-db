@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,100&display=swap');
+
+:root{
+    --main-font:'Roboto', sans-serif;
+    --main-color: rgb(48, 48, 48);
+}
+
+body{
+    background-color: rgb(0, 120, 201);
+}
+
+div.main{
+    display: flex;
+    /* justify-content: center;
+    align-items: center;
+    height: 100vh; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* outline: 3px solid yellow; */
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+div.st-info{
+    /* outline: 3px solid red; */
+    /* background-color: aliceblue; */
+    /* height: 20px; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: auto; */
+}
+
+div.add-data{
+    /* outline: 3px solid rgb(0, 255, 0); */
+    /* height: 20px; */
+    width: 50%;
+    /* margin: auto; */
+}
+
+img.profile-pic{
+    width: 50%;
+    border-radius: 50%;
+}
+h1.st-name{
+    font-family: var(--main-font);
+    font-size: 40px;
+    color: var(--main-color);
+    font-weight: 900;
+}
+h1.role{
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-size: 25px;
+    margin-top: -25px;
+}
