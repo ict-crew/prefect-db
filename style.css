@@ -74,3 +74,8 @@ h1.time{
     color: rgb(21, 180, 0);
     font-size: 25rem;
 }
+
+div.scan-info{
+    outline: 3px solid red;
+    height: 50%;
+}
