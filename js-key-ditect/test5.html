@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(31, 31, 31);
+        }
+        h1.main-title{
+            font-size: 40px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="guess1" class="guess" data-letters="">
+        <h1 id="main_title" class="main-title"></h1>
+    </div>
+
+
+
+
+    <script>
+        const letters_patten = /[a-z]/;
+        let currentGuessCount = 1;
+        let currentGuess = document.querySelector('#guess' + currentGuessCount);
+        //let currentLetters = currentGuess.dataset.letters;
+        // ditact keypress (letter, backspace, other)
+        document.addEventListener("keydown", (e) => {
+            console.log('keypress: ' + e.key);
+
+            //If key press is string of length is a letter
+            let keypress = e.key;
+            if (keypress.length == 1 && letters_patten.test(e.key)) {
+               // If  a Letter 
+                // let is_letter = ;
+                console.log('is letter');
+                updateLetters(keypress)
+            }
+        
+        //update tile markup
+        const updateTiles = () => {
+
+        }
+
+
+
+            // If backspeace
+        })
+
+        // Update Letters
+        const updateLetters = (letter) => {
+            console.log('currentGuessCount = ' + currentGuessCount, 
+                        '\ncurrentGuess.dataset.letters = ' + currentGuess.dataset.letters,
+                        '\nupdate Letters = ' + letter);
+            currentGuess.dataset.letters = currentGuess.dataset.letters + letter;
+            console.log('Updated currentGuess.dataset.letters = ' + currentGuess.dataset.letters)
+
+            // my code
+
+            var main_title = document.getElementById("main_title");
+            main_title.innerText = currentGuess.dataset.letters;
+        }
+
+
+        // Update tile markup
+
+        //delete last letter
+
+    </script>
+</body>
+</html>
