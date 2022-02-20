@@ -10,7 +10,7 @@
             background-color: rgb(31, 31, 31);
         }
         h1.main-title{
-            font-size: 40px;
+            font-size: 100px;
             color: #fff;
         }
     </style>
@@ -25,7 +25,8 @@
 
 
     <script>
-        const letters_patten = /[a-z]/;
+
+        const letters_patten = /[0-9]/;
         let currentGuessCount = 1;
         let currentGuess = document.querySelector('#guess' + currentGuessCount);
         //let currentLetters = currentGuess.dataset.letters;
@@ -41,10 +42,13 @@
                 console.log('is letter');
                 updateLetters(keypress)
             }
+            else if (e.key == 'Enter') {
+                submitGuess();
+            }
         
         //update tile markup
         const updateTiles = () => {
-
+            
         }
 
 
@@ -62,12 +66,20 @@
 
             // my code
 
-            var main_title = document.getElementById("main_title");
-            main_title.innerText = currentGuess.dataset.letters;
+            // var main_title = document.getElementById("main_title");
+            // main_title.innerText = currentGuess.dataset.letters;
         }
 
 
         // Update tile markup
+
+        const submitGuess = () =>{
+            console.log('Enter has been pressed')
+            var main_title = document.getElementById("main_title");
+            main_title.innerText = currentGuess.dataset.letters;
+            currentGuess.dataset.letters =''
+            // alert("Your Number is" + currentGuess.dataset.letters);
+        }
 
         //delete last letter
 
