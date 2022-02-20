@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,100&display=swap');
+        html{
+            font-size: 6.25%;
+        }
+
+        body{
+            background-color: rgb(27, 27, 27);
+            font-family: 'Roboto', sans-serif;
+        }
+        div.main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 130px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 30rem;
+        }
+        span.letter{
+            color: rgb(0, 17, 255);
+        }
+        h1.auther{
+            font-size: 10rem;
+            margin-top: 0px;
+        }
+        h1.main-text{
+            margin: 0px;
+        }
+
+        @media only screen and (max-width: 900px){
+            div.main{
+                display: none;
+            }
+        }
+
+        h1.small-screen{
+            font-size: 30rem;
+            text-align: center;
+            margin-top: 100px;
+            color: red;
+        }
+
+        @media only screen and (min-width: 900px){
+            h1.small-screen{
+                display: none;
+            }
+        }
+
+        div.js-test{
+            display: flex;
+        
+        }
+        h1.numb{
+            font-size: 15rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h1 class="main-text" id="main_text">PRESS A KEY</h1>
+        <h1 class="auther">Created By Dinujaya Sandaruwan</h1>
+
+        <div class="js-test">
+            <h1 id="text_1" class="numb">1</h1>
+            <h1 id="text_2" class="numb">2</h1>
+            <h1 id="text_3" class="numb">3</h1>
+        </div>
+
+    </div>
+
+    <h1 class="small-screen">Please use a larger display..!</h1>
+    
+    <script>
+
+        // var count_1 = 1
+        // var count_2 = true
+        // var count_4 = true
+
+        // if (count_1 == 1){
+        //     document.addEventListener('keydown', (e) => { 
+        //         let let_1 = e.key;
+        //         var text_1 = document.getElementById("text_1");
+        //         text_1.innerText = let_1;
+
+        //         var main_text = document.getElementById("main_text");
+        //         main_text.innerHTML ='You Pressed : <span class="letter">' + e.key + '</span>';
+
+        //         });
+
+        //     console.log(count_1)
+        //     count_1 = 0;
+        // }
+
+
+        // console.log("end")
+
+
+        document.addEventListener('keydown', (e) => { 
+            if (e.key == "1") {
+                var one = 1    
+            }
+            else if (e.key == "2") {
+                var tow = 1    
+            }
+            else if (e.key == "3") {
+                var three = 1    
+            }
+            else if (e.key == "4") {
+                var four = 1    
+            }
+            else if (e.key == "5") {
+                var five = 1    
+            }
+            else if (e.key == "6") {
+                var six = 1    
+            }
+            else if (e.key == "7") {
+                var seven = 1    
+            }
+            else if (e.key == "8") {
+                var eight = 1    
+            }
+            else if (e.key == "9") {
+                var nine = 1    
+            }
+        });
+
+    
+    </script>
+</body>
+</html>
