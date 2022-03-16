@@ -5,12 +5,19 @@
     --main-color: rgb(48, 48, 48);
 }
 
-html{
+html { 
+    background: url(img/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
     font-size: 6.25%;
 }
 
+
 body{
-    background-color: rgb(0, 91, 228);
+    /* background-color: rgb(0, 91, 228); */
     /* background-image: url(img/me.jpeg); */
 }
 
@@ -85,6 +92,8 @@ div.scan-info{
 
 img.scan-img{
     width: 300px;
+    margin-top: -20px;
+    margin-bottom: -20px;
 }
 button.main-btn{
     padding: 20px;
