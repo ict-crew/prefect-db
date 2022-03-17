@@ -11,6 +11,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    margin: 0;
 }
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -32,6 +33,7 @@ div.underline{
     margin-top: 0px;
     display: flex;
     height: 10px;
+    margin-top: -30px;
 
     /* outline: 2px solid red; */
 }
@@ -156,17 +158,61 @@ div.after-scan-main{
     display: none;
 }
 
-div.model-test{
+div.model-dark-bg{
     position: fixed;
     top: 0;
     bottom: 0;
     height: 100vh;
     width: 100vw;
-    background: url(img/bg.jpg) no-repeat center center fixed; 
+    box-sizing: border-box;
+    background: url(img/bg-black-white.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+div.show-model-bg{
+    opacity: 100;
+}
+
+div.model-doble-ckeck{
+    background-color: rgb(255, 27, 27);
+    font-family: var(--main-font);
+    color: white;
+    padding: 20px;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+div.server-not-started{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background: url(img/bg-black-white.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+
+    /* opacity: 0; */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 
