@@ -1,40 +1,310 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DB</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <style>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </style>
-</head>
-<body>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- My Local CSS -->
+    <link rel="stylesheet" href="ui.css">
+
+    <title>Data Table</title>
+  </head>
+  <body>
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                User Password Test
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+    <div class="user-identify" id="user_identify">
+            <div class="col-auto">
+              <label for="user_test_password" class="visually-hidden">Password</label>
+              <input type="password" class="form-control" id="user_test_password" placeholder="Password">
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-primary" onclick=user_test() >Confirm identity</button>
+            </div>
+    </div>
+
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                Nave Bar
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+    <div class="main-ui" id="main_ui">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Mayurapada Prefect Databse</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Normal Links -->
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Refresh Data</a>
+                      </li>
+
+                      <!-- Dropdown Manus -->
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Filter Role
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Senoir Prefects</a></li>
+                          <li><a class="dropdown-item" href="#">Junior Prefects</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Show All Data</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Filter Grade
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Grade - 9</a></li>
+                          <li><a class="dropdown-item" href="#">Grade - 10</a></li>
+                          <li><a class="dropdown-item" href="#">Grade - 11</a></li>
+                          <li><a class="dropdown-item" href="#">Grade - 12</a></li>
+                          <li><a class="dropdown-item" href="#">Grade - 13</a></li>
+
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Show All Data</a></li>
+                        </ul>
+                      </li>
+
+                      <!-- Disabled Link by Bootstrap -->
+                      <!-- <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                      </li> -->
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="date" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        </div>
     
 
-    <script>
-        var st_name = getCookie('dinujaya');
-        if (st_name == 'true') {
-            console.log("Dinujaya Done")
-        }
-        else{
-            console.log('Dinujaya Not done')
-        }
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                table
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
-        // Get Cookies
-        function getCookie(name) {
-            var cookie, c;
-            cookies = document.cookie.split(';');
-            for (var i=0; i < cookies.length; i++) {
-                c = cookies[i].split('=');
-                if (c[0] == name) {
-                    return c[1];
-                }
-            }
-            return "";
-        }
-    </script>
+        <div class="student-tables">
+            <div class="student-table-hedding">
+                <h1>Date <span class="badge bg-secondary">2022/03/15</span></h1>
+            </div>
+            <div class="single-student-table">
+                <table class="table table-hover table-striped table-light">
+                    <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Class</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>K.A.L.L.D Wijewardhana</td>
+                        <td>13-P</td>
+                        <td>06:20:40 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>K.B.I Kumarasingha</td>
+                        <td>13-A</td>
+                        <td>06:20:41 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>T.G.R Randika</td>
+                        <td>13-B</td>
+                        <td>06:20:42 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>T.O.W.G.S.S Vimukthi</td>
+                        <td>13-C</td>
+                        <td>06:20:43 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>R.M.S D. Rathnayaka</td>
+                        <td>13-D</td>
+                        <td>06:20:44 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>T.M.J.L Tennakoon</td>
+                        <td>13-E</td>
+                        <td>06:20:45 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>J.M.T.D Jayasooriya</td>
+                        <td>13-F</td>
+                        <td>06:20:46 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>V.C.S Kulathilaka</td>
+                        <td>13-G</td>
+                        <td>06:20:47 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>A.M.D.S Bandara</td>
+                        <td>13-H</td>
+                        <td>06:20:48 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>D.W.S.P. Dehiwaththa</td>
+                        <td>13-I</td>
+                        <td>06:20:49 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>G.C.H Wijewardana</td>
+                        <td>13-J</td>
+                        <td>06:20:50 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>B.M.C.I.M Bannahaka</td>
+                        <td>13-K</td>
+                        <td>06:20:51 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>A.M.N.N Adikari</td>
+                        <td>13-L</td>
+                        <td>06:20:52 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>K.A.L.L.D Wijewardhana</td>
+                        <td>13-M</td>
+                        <td>06:20:53 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>K.B.I Kumarasingha</td>
+                        <td>13-N</td>
+                        <td>06:20:54 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>T.G.R Randika</td>
+                        <td>13-O</td>
+                        <td>06:20:55 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>T.O.W.G.S.S Vimukthi</td>
+                        <td>13-P</td>
+                        <td>06:20:56 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>R.M.S D. Rathnayaka</td>
+                        <td>13-Q</td>
+                        <td>06:20:57 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>T.M.J.L Tennakoon</td>
+                        <td>13-R</td>
+                        <td>06:20:58 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>J.M.T.D Jayasooriya</td>
+                        <td>13-S</td>
+                        <td>06:20:59 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>V.C.S Kulathilaka</td>
+                        <td>13-T</td>
+                        <td>06:20:12 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>A.M.D.S Bandara</td>
+                        <td>13-U</td>
+                        <td>06:20:13 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>D.W.S.P. Dehiwaththa</td>
+                        <td>13-V</td>
+                        <td>06:20:14 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>G.C.H Wijewardana</td>
+                        <td>13-W</td>
+                        <td>06:20:15 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>B.M.C.I.M Bannahaka</td>
+                        <td>13-X</td>
+                        <td>06:20:16 A.M</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>A.M.N.N Adikari</td>
+                        <td>13-Y</td>
+                        <td>06:20:17 A.M</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright: Mayurapada Central College
+      </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+    <script src="db.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
 </html>

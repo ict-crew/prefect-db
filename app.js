@@ -27,8 +27,7 @@ document.addEventListener("keydown", (e) => {
     let keypress = e.key;
     if (keypress.length == 1 && letters_patten.test(e.key)) {
        // If  a Letter 
-        // let is_letter = ;
-        console.log('is letter');
+        // console.log('is letter');
         updateLetters(keypress)
     }
     else if (e.key == 'Enter') {
@@ -36,26 +35,34 @@ document.addEventListener("keydown", (e) => {
         document.getElementById('after_scan_main').style.display = 'flex';
         submitGuess();
 
-        if(back_to == 'true'){
-            var back_to_screen_01 = setTimeout(back_to_screen_server, 5000);
-            clearTimeout(back_to_screen_02);
-            back_to = 'false'
-            function back_to_screen_server() {
-                document.getElementById('screen_server').style.display = 'flex';
-                document.getElementById('after_scan_main').style.display = 'none';
-            }
+        if (back_to == 'true') {
+            back_to_screen1 = setTimeout(back_to_screen_server, 10000);
+            back_to = 'false';
         }
-        else{
-            var back_to_screen_02 = setTimeout(back_to_screen_server, 5000);
-            clearTimeout(back_to_screen_01);
-            back_to = 'true'
-            function back_to_screen_server() {
-                document.getElementById('screen_server').style.display = 'flex';
-                document.getElementById('after_scan_main').style.display = 'none';
-            }
+        else if (back_to == 'false'){
+            clearTimeout(back_to_screen1);
+            back_to_screen1 = setTimeout(back_to_screen_server, 10000);
         }
-    }
+        
+        
+        
 
+        
+        // console.log('saman')
+        
+        
+        // var check_element = document.getElementById('after_scan_main');
+
+        // if (check_element.style.display != 'flex') {
+        //     
+        // }
+        
+
+    }
+function back_to_screen_server() {
+    document.getElementById('screen_server').style.display = 'flex';
+    document.getElementById('after_scan_main').style.display = 'none';
+}
 
 //update tile markup
 const updateTiles = () => {
@@ -134,7 +141,7 @@ const submitGuess = () =>{
 
 // document.cookie = "dinujaya=true;";
 
-console.log(getCookie('dinujaya'))
+// console.log(getCookie('dinujaya'))
 
 // Get Cookies
 function getCookie(name) {

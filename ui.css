@@ -5,7 +5,7 @@
     --main-color: rgb(48, 48, 48);
 }
 
-html { 
+body { 
     background: url(img/bg.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -153,3 +153,48 @@ h1.time{
 div.after-scan-main{
     display: none;
 }
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            Database With Bootstrap
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+div.user-identify{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* outline: 2px solid red; */
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    /* display: none; */
+}
+
+div.col-auto{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+div.student-tables{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+div.single-student-table{
+    border-radius: 10px;
+    overflow: hidden;
+    /* outline: 2px solid red; */
+}
+
+div.main-ui{
+    display: none;
+}
+
+
