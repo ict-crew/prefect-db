@@ -31,9 +31,10 @@ document.addEventListener("keydown", (e) => {
         updateLetters(keypress)
     }
     else if (e.key == 'Enter') {
+        submitGuess();
         document.getElementById('screen_server').style.display = 'none';
         document.getElementById('after_scan_main').style.display = 'flex';
-        submitGuess();
+        
 
         if (back_to == 'true') {
             back_to_screen1 = setTimeout(back_to_screen_server, 10000);
@@ -164,15 +165,7 @@ function getCookie(name) {
 // Doble Check Card
 
 function doble_check_card(){
-    var cooke_value = currentGuess.dataset.letters;
-    console.log(getCookie(24108))
-    if (cooke_value == getCookie(24108)) {
-        document.getElementById('id01').style.display='block'
-        setTimeout(close_model_box, 3000);
-        function close_model_box() {
-            document.getElementById('id01').style.display='none'
-        }
+    document.getElementById('launch_model').click()
+    return
 
-    }
-     
 }

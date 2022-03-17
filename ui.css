@@ -156,10 +156,18 @@ div.after-scan-main{
     display: none;
 }
 
-div.card_model_box{
-    background-color: rgb(255, 24, 24);
+div.model-test{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background: url(img/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-
 
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -202,5 +210,6 @@ div.single-student-table{
 div.main-ui{
     display: none;
 }
+
 
 
