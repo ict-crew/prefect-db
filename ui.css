@@ -21,6 +21,7 @@ h1.main-title{
     text-align: center;
     padding-top: 20px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     font-size: 70px;
     color: white;
     text-shadow: 3px 3px 3px black;
@@ -28,7 +29,7 @@ h1.main-title{
 div.underline{
     width: 30%;
     margin: auto;
-    margin-top: -30px;
+    margin-top: 0px;
     display: flex;
     height: 10px;
 
@@ -80,6 +81,7 @@ span.red-light{
 }
 h1.put-card{
     margin-top: -10px;
+    font-weight: 700;
 }
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -152,6 +154,10 @@ h1.time{
 
 div.after-scan-main{
     display: none;
+}
+
+div.card_model_box{
+    background-color: rgb(255, 24, 24);
 }
 
 

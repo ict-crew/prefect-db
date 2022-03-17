@@ -1,5 +1,3 @@
-var hd = 'I love you Heshani'
-
 //User Password Test
 function user_test() {
     var password_input = document.getElementById('user_test_password');
