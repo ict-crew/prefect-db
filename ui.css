@@ -193,27 +193,6 @@ div.model-doble-ckeck{
     border-radius: 20px;
 }
 
-div.server-not-started{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    background: url(img/bg-black-white.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-
-    /* opacity: 0; */
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
 
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -250,6 +229,7 @@ div.student-tables{
 div.single-student-table{
     border-radius: 10px;
     overflow: hidden;
+    cursor: pointer;
     /* outline: 2px solid red; */
 }
 

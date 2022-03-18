@@ -79,61 +79,59 @@ const submitGuess = () =>{
     //Doble Check Dard Data
     doble_check_card(currentGuess.dataset.letters)
 
-    if (getCookie('start') == 'start') {
-        // Change Name
-        var main_name = document.getElementById("name");
-        var st_avater = document.getElementById("avater");
-        if (currentGuess.dataset.letters == '24108') {
-            main_name.innerHTML = "Dinujaya Sandaruwan";
-            st_avater.src="img/me.jpeg";
-            document.cookie = "24108=24108;";
-        }
-        if (currentGuess.dataset.letters == '24109') {
-            main_name.innerHTML = "Heshani Mahinsala";
-            st_avater.src="img/dummy/heshani.jpg";
-            document.cookie = "24109=24109;";
-        }
-        if (currentGuess.dataset.letters == '24110') {
-            main_name.innerHTML = "Saman Kumara";
-            st_avater.src="img/dummy/1.jpg";
-            document.cookie = "24110=24110;";
-        }
-        if (currentGuess.dataset.letters == '24111') {
-            main_name.innerHTML = "Dinesh Gamage";
-            st_avater.src="img/dummy/2.jpg";
-            document.cookie = "24111=24111;";
-        }
-        if (currentGuess.dataset.letters == '24112') {
-            main_name.innerHTML = "Sirimath Sugathapala";
-            st_avater.src="img/dummy/3.jpg";
-            document.cookie = "24112=24112;";
-        }
-        if (currentGuess.dataset.letters == '24113') {
-            main_name.innerHTML = "Wasantha Kapuge";
-            st_avater.src="img/dummy/4.jpg";
-            document.cookie = "24113=24113;";
-        }
-
-        // Get date and time
-        let today = new Date();
-
-        let hours = addZero(today.getHours());
-        let minutes = addZero(today.getMinutes());
-        let seconds = addZero(today.getSeconds());
-        let current_time = `${hours}:${minutes}:${seconds}`;
-        // output.innerText = current_time;
-
-        function addZero(num){
-            return num < 10 ? `0${num}`:num;
-        }
-
-        //Change Time
-        came_time = document.getElementById('came_time');
-        came_time.innerHTML = 'Came to school at :- ' + current_time + ' A.M';
-        // main_name.innerText = currentGuess.dataset.letters;
-        currentGuess.dataset.letters =''
-        // alert("Your Number is" + currentGuess.dataset.letters);
+    // Change Name
+    var main_name = document.getElementById("name");
+    var st_avater = document.getElementById("avater");
+    if (currentGuess.dataset.letters == '24108') {
+        main_name.innerHTML = "Dinujaya Sandaruwan";
+        st_avater.src="img/me.jpeg";
+        document.cookie = "24108=24108;";
     }
+    if (currentGuess.dataset.letters == '24109') {
+        main_name.innerHTML = "Heshani Mahinsala";
+        st_avater.src="img/dummy/heshani.jpg";
+        document.cookie = "24109=24109;";
+    }
+    if (currentGuess.dataset.letters == '24110') {
+        main_name.innerHTML = "Saman Kumara";
+        st_avater.src="img/dummy/1.jpg";
+        document.cookie = "24110=24110;";
+    }
+    if (currentGuess.dataset.letters == '24111') {
+        main_name.innerHTML = "Dinesh Gamage";
+        st_avater.src="img/dummy/2.jpg";
+        document.cookie = "24111=24111;";
+    }
+    if (currentGuess.dataset.letters == '24112') {
+        main_name.innerHTML = "Sirimath Sugathapala";
+        st_avater.src="img/dummy/3.jpg";
+        document.cookie = "24112=24112;";
+    }
+    if (currentGuess.dataset.letters == '24113') {
+        main_name.innerHTML = "Wasantha Kapuge";
+        st_avater.src="img/dummy/4.jpg";
+        document.cookie = "24113=24113;";
+    }
+
+    // Get date and time
+    let today = new Date();
+
+    let hours = addZero(today.getHours());
+    let minutes = addZero(today.getMinutes());
+    let seconds = addZero(today.getSeconds());
+    let current_time = `${hours}:${minutes}:${seconds}`;
+    // output.innerText = current_time;
+
+    function addZero(num){
+        return num < 10 ? `0${num}`:num;
+    }
+
+    //Change Time
+    came_time = document.getElementById('came_time');
+    came_time.innerHTML = 'Came to school at :- ' + current_time + ' A.M';
+    // main_name.innerText = currentGuess.dataset.letters;
+    currentGuess.dataset.letters =''
+    // alert("Your Number is" + currentGuess.dataset.letters);
 }
 
 // Start Server
