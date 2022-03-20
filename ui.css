@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,100&display=swap');
+
+:root{
+    --main-font:'Roboto', sans-serif;
+    --main-color: rgb(48, 48, 48);
+}
+
+body { 
+    background: url(img/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            Screen Server (Main Ui)
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+h1.main-title{
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+div.underline{
+    width: 30%;
+    margin: auto;
+    margin-top: 0px;
+    display: flex;
+    height: 10px;
+    margin-top: -30px;
+
+    /* outline: 2px solid red; */
+}
+hr.line{
+    height: 5px;
+    background-color: white;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 3px 3px 3px black;
+}
+div.left-cr{
+    background-color: white;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 0px 5px 0px 5px;
+    box-shadow: 2px 2px 2px black;
+
+}
+
+img.scan-img{
+    width: 22%;
+    border-radius: 20px;
+    
+}
+div.main{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: rgb(29, 29, 29);
+    font-weight: 700;
+}
+
+span.red-light{
+    color: red;
+}
+h1.put-card{
+    margin-top: -10px;
+    font-weight: 700;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            After Indentified a Bar code
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+div.after-scan-main{
+    width: 40%;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    /* height: 400px; */
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+img.avater{
+    border-radius: 50%;
+    width: 40%;
+    box-shadow: 0px 0px 5px var(--main-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.after-scan-main-insicde{
+    /* width: 50%; */
+    /* outline: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.main-inside-right{
+    /* width: 70%; */
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+div.main-inside-left{
+    /* width: 30%; */
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+
+h1.st-name{
+    font-family: var(--main-font);
+    font-size: 50px;
+    color: var(--main-color);
+    font-weight: 900;
+    text-shadow: 0px 2px 5px rgba(1, 1, 1, 0.5);
+    margin-top: 10px;
+}
+
+h1.role{
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-size: 35px;
+    margin-top: -25px;
+}
+h1.time{
+    font-family: var(--main-font);
+    margin-top: -10px;
+    color: rgb(21, 180, 0);
+    font-size: 25px;
+}
+
+div.after-scan-main{
+    display: none;
+}
+
+div.model-dark-bg{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background: url(img/bg-black-white.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+div.show-model-bg{
+    opacity: 100;
+}
+
+div.model-doble-ckeck{
+    background-color: rgb(255, 27, 27);
+    font-family: var(--main-font);
+    color: white;
+    padding: 20px;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            Database With Bootstrap
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+div.user-identify{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* outline: 2px solid red; */
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    /* display: none; */
+}
+
+div.col-auto{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+div.student-tables{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+div.single-student-table{
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    /* outline: 2px solid red; */
+}
+
+div.main-ui{
+    display: none;
+}
+
+
+

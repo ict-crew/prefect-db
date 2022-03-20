@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+    <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+
+
+    <h1 class="main-title">
+        Mayurapada Prefect Database
+    </h1>
+    <div class="underline">
+        <div class="left-cr"></div>
+        <hr class="line">
+        <div class="left-cr"></div>
+    </div>
+
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                Screen Server (Main Ui)
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+    <div class="main" id="screen_server">
+        <img src="img/bar-scan-gif.gif" alt="" class="scan-img">
+        <h1 class="put-card">Please put your card in <span class="red-light">red</span>  light</h1>
+    </div>
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                After Indetified a bar code
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+    <div class="after-scan-main" id="after_scan_main">  
+        <div class="after-scan-main-insicde main-inside-left">
+            <img src="img/profile-avater.png" alt="" class="avater" id="avater">
+        </div>
+        <div class="after-scan-main-insicde main-inside-right" id="guess1" data-letters="">
+            <h1 class="st-name" id="name">Prefect Name</h1>
+            <h1 class="role">(Senior or Junior)</h1>
+            <h1 class="time" id="came_time">School Arrival Time</h1>
+        </div>
+    </div>
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                Alat Card Model Box
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+    <div class="model-dark-bg" id="model_dark_bg"> 
+        <div class="model-doble-ckeck">
+            <h1>Your name is already included in the system..!</h1>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script></body>
+</html>

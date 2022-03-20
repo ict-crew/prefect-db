@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prefect DB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main">
+        <div class="st-info">
+            <img src="img/me.jpeg" alt="" class="profile-pic">
+            <h1 class="st-name" id="name">Dinujaya Sandaruwan</h1>
+            <h1 class="role">(Senior Prefect)</h1>
+            <h1 class="time">Came to school at :- 06:30 A.M</h1>
+        </div>
+        <div class="add-data">
+            <div class="scan-info">
+                <img src="img/bar-scan.jpg" alt="" class="scan-img">
+            </div>
+            <div class="push-btns">
+                <button class="upload-data main-btn">Uplod Data</button>
+                <button class="download-data main-btn">Download Data</button>
+                <button class="test-btn main-btn">Some Button</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const letters_patten = /[0-9]/;
+        let currentGuessCount = 1;
+        let currentGuess = document.querySelector('#guess' + currentGuessCount);
+        //let currentLetters = currentGuess.dataset.letters;
+        // ditact keypress (letter, backspace, other)
+        document.addEventListener("keydown", (e) => {
+            console.log('keypress: ' + e.key);
+
+            //If key press is string of length is a letter
+            let keypress = e.key;
+            if (keypress.length == 1 && letters_patten.test(e.key)) {
+               // If  a Letter 
+                // let is_letter = ;
+                console.log('is letter');
+                updateLetters(keypress)
+            }
+            else if (e.key == 'Enter') {
+                // submitGuess();
+                // document.body.style.backgroundColor = "red";
+                document.getElementById("name");
+                
+            }
+
+        
+        //update tile markup
+        const updateTiles = () => {
+            
+        }
+
+
+
+            // If backspeace
+        });
+    </script>
+</body>
+</html>

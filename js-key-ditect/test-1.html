@@ -61,6 +61,14 @@
                 display: none;
             }
         }
+
+        div.js-test{
+            display: flex;
+        
+        }
+        h1.numb{
+            font-size: 15rem;
+        }
     </style>
 </head>
 <body>
@@ -69,70 +77,72 @@
         <h1 class="main-text" id="main_text">PRESS A KEY</h1>
         <h1 class="auther">Created By Dinujaya Sandaruwan</h1>
 
+        <div class="js-test">
+            <h1 id="text_1" class="numb">1</h1>
+            <h1 id="text_2" class="numb">2</h1>
+            <h1 id="text_3" class="numb">3</h1>
+        </div>
+
     </div>
 
     <h1 class="small-screen">Please use a larger display..!</h1>
     
     <script>
-        // var count_main = 0
-        var count = 0
 
-        // let let_1 = 0;
-        // let let_2 = 0;
-        // let let_3 = 0;
-        // let let_4 = 0;
-        // let currentGuess = document.querySelector('#guess' + currentGuessCount);
+        // var count_1 = 1
+        // var count_2 = true
+        // var count_4 = true
 
+        // if (count_1 == 1){
+        //     document.addEventListener('keydown', (e) => { 
+        //         let let_1 = e.key;
+        //         var text_1 = document.getElementById("text_1");
+        //         text_1.innerText = let_1;
 
-        // detect keypress (letter, backspace, enter, other)
-        document.addEventListener('keydown', (e) => {
-        console.log('keypress: ' + e.key);
-        console.log(count);
-        if (count == 0) {
-            var let_1 = e.key;
-            count == count +1; 
-        } else if (count == 1) {
-            var let_2 = e.key;
-            count == count +1; 
-        } else if (count == 2) {
-            var let_3 = e.key;
-            count == count +1; 
-        } else if (count == 3) {
-            var let_4 = e.key;
-            count == count +1; 
-        }
+        //         var main_text = document.getElementById("main_text");
+        //         main_text.innerHTML ='You Pressed : <span class="letter">' + e.key + '</span>';
 
-        count = count +1;
-        // console.log(main_let_1)
-        // console.log(main_let_2)
-        // console.log(main_let_3)
-        // console.log(main_let_4)
-        var final_let = let_1 + let_2 + let_3 + let_4;
-        // console.log(final_let)
+        //         });
 
-        if (e.key == "Enter") {
-            console.log(final_let)
-            console.log("Saman")
-        }
-        
-        var main_text = document.getElementById("main_text");
-        main_text.innerHTML ='You Pressed : <span class="letter">' + e.key + '</span>';
-        // console.log(e.key)
-        // var i=0;
-        // while (i < 3) {
-        //     // console.log(e.key);
-            
-        //     i++;
+        //     console.log(count_1)
+        //     count_1 = 0;
         // }
-            // if (e.key == "d") {
-            //     document.body.style.backgroundColor = "green";
-            // }
-            // else{
-            //     document.body.style.backgroundColor = "rgb(27, 27, 27)";
-            // }
+
+
+        // console.log("end")
+
+
+        document.addEventListener('keydown', (e) => { 
+            if (e.key == "1") {
+                var one = 1    
+            }
+            else if (e.key == "2") {
+                var tow = 1    
+            }
+            else if (e.key == "3") {
+                var three = 1    
+            }
+            else if (e.key == "4") {
+                var four = 1    
+            }
+            else if (e.key == "5") {
+                var five = 1    
+            }
+            else if (e.key == "6") {
+                var six = 1    
+            }
+            else if (e.key == "7") {
+                var seven = 1    
+            }
+            else if (e.key == "8") {
+                var eight = 1    
+            }
+            else if (e.key == "9") {
+                var nine = 1    
+            }
         });
-        
-        // count_main = count_main +1
+
+    
     </script>
 </body>
 </html>
