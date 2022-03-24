@@ -127,6 +127,9 @@ const submitGuess = () =>{
         document.cookie = "start_server=server_started;";
     }
 
+    // Start Server
+    start_server(currentGuess.dataset.letters)
+
     // Get date and time
     let today = new Date();
 
@@ -151,9 +154,9 @@ const submitGuess = () =>{
 // Start Server
 function start_server(server_key) {
     if (server_key == '1234') {
-        const dark_bg_and_hedding = document.getElementById('server_not_started');
-        dark_bg_and_hedding.style.display = 'none';
-        document.cookie = "start=start;";
+        document.body.style.backgroundImage = "url('img/bg.jpg')";
+        document.getElementById('not_started_main').style.display = 'none';
+        document.getElementById('screen_server').style.display = 'flex';
     }
 
 }
@@ -216,3 +219,4 @@ function start_process_bar() {
     }
     
 }
+

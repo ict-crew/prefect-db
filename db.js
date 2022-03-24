@@ -9,3 +9,7 @@ function user_test() {
 
     }
 }
+
+function student_data() {
+    document.getElementById('toggle_student_data_model').click();
+  }

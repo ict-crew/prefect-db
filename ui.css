@@ -6,7 +6,7 @@
 }
 
 body { 
-    background: url(img/bg.jpg) no-repeat center center fixed; 
+    background: url(img/bg-black-white.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -77,7 +77,7 @@ div.main{
     color: rgb(29, 29, 29);
     font-weight: 700;
 
-    /* display: none; */
+    display: none;
 }
 
 span.red-light{
@@ -301,4 +301,31 @@ h1.server-down{
     display: none;
     margin-top: -10px;
     font-size: 20px;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            Uploading Data to server
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+div.not-started-main{
+    background-color: #e5eff1;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: rgb(196, 0, 0);
+    font-weight: 700;
+}
+
+img.server-loading{
+    width: 150px;
+    margin-top: -20px;
 }
